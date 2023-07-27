@@ -47,7 +47,7 @@ char **tokenize_input(char *input)
 	tmp = _strdup(input);
 	if (tmp == NULL)
 	{
-		_puts("Memor allocation error\n");
+		_puts("Memory allocation error\n");
 		exit(EXIT_FAILURE);
 	}
 	tokens = tokenize(tmp, " \t\r\n\a");
