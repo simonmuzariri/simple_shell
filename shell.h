@@ -20,7 +20,7 @@
 #define PATH_SEPARATOR ":"
 #define PROMPT "$ "
 #define MAX_TOKENS 1024
-#define BUFFE_SIZE 1024
+#define BUFFER_SIZE 1024
 
 /*prompt.c*/
 void prompt(void);
@@ -34,7 +34,7 @@ void *get_line(void);
 /*built-funcs*/
 int check_for_builtin(char **args);
 int execute_builtin(char *cmd, char **args);
-int shell_help(void);
+void shell_help(void);
 void shell_exit(char **args);
 void shell_cd(char **args);
 int shell_setenv(char **args);
@@ -86,7 +86,7 @@ unsigned int _strspn(char *s, char *accept);
 int _atoi(const char *str);
 char *_memset(char *, char, unsigned int);
 char *_memcpy(char *dest, char *src, unsigned int n);
-void *_realloc(voi *, unsigned int, unsigned int);
+void *_realloc(void *, unsigned int, unsigned int);
 void *_calloc(unsigned int nmemb, unsigned int size);
 
 #endif
