@@ -17,6 +17,8 @@ else if (!_strcmp(args[0], "env"))
 shell_env();
 else if (!_strcmp(args[0], "setenv"))
 shell_setenv(args);
+else if (!_strcmp(args[0], "unsetenv"))
+shell_unsetenv(args);
 else if (!_strcmp(args[0], "help"))
 shell_help();
 else if (!_strcmp(args[0], "cd"))
