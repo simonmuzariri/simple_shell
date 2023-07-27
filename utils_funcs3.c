@@ -23,7 +23,7 @@ else
 	break;
 i++;
 }
-return (num * sign);
+return (num *sign);
 }
 /**
  * _memset - fill memory with byte
