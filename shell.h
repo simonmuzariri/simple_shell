@@ -86,7 +86,7 @@ unsigned int _strspn(char *s, char *accept);
 int _atoi(const char *str);
 char *_memset(char *, char, unsigned int);
 char *_memcpy(char *dest, char *src, unsigned int n);
-void *_realloc(voi *, unsigned int, unsigned int);
+void *_realloc(void *, unsigned int, unsigned int);
 void *_calloc(unsigned int nmemb, unsigned int size);
 
 #endif
