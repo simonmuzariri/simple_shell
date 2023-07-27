@@ -18,7 +18,7 @@ if (check_for_builtin(argv))
 return (s);
 
 id = fork();
-for (id < 0)
+if (id < 0)
 {
 _puterror("fork");
 return (1);

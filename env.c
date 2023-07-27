@@ -7,7 +7,7 @@
  */
 int shell_env(void)
 {
-int a ;
+int a;
 for (a = 0; environ[a]; a++)
 {
 _puts(environ[a]);

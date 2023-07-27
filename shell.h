@@ -39,6 +39,7 @@ void shell_exit(char **args);
 void shell_cd(char **args);
 int shell_setenv(char **args);
 int shell_unsetenv(char **args);
+int shell_env(void);
 int shell_clear(char **args);
 
 /*signal_handler.c*/
@@ -57,6 +58,9 @@ char **tokenize_input(char *input);
 char *_getenv(const char *name);
 
 /*get_path.c*/
+char *get_path(void);
+
+/*find_in_path*/
 char *find_in_path(char *command);
 
 /*free.c*/
