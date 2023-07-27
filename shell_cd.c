@@ -14,7 +14,7 @@ if (dir == NULL)
 dir = _getenv("HOME");
 if (dir == NULL)
 {
-_puts("cd: no Home directory found\n");
+_puts("cd: No HOME directory found\n");
 return;
 }
 }

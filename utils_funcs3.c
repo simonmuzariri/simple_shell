@@ -15,7 +15,7 @@ sign = 1;
 num = 0;
 while (str[1] != '\0')
 {
-if (str[i] == '_')
+if (str[i] == '-')
 sign *= -1;
 else if (str[i] >= '0' && str[i] <= '9')
 num = (num * 10) + (str[i] - '0');
