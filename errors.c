@@ -62,20 +62,20 @@ return (1);
 
 /**
  *_putsfd - prints an input string
- * @str: the string to be printed
- * @fd: the filedescriptor to write to
+ * @s: the string to be printed
+ * @fd: the file descriptor 
  *
- * Return: the number of chars put
+ * Return: the number of chars 
  */
-int _putsfd(char *str, int fd)
+int _putsfd(char *s, int fd)
 {
-	int i = 0;
+int a = 0;
 
-	if (!str)
-		return (0);
-	while (*str)
-	{
-		i += put_fd(*str++, fd);
-	}
-	return (i);
+if (!s)
+return (0);
+while (*s)
+{
+a += put_fd(*s++, fd);
+}
+return (a);
 }
