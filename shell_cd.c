@@ -9,6 +9,7 @@ void shell_cd(char **args)
 char *dir = args[1];
 int ret;
 
+/* If no argument is provided, change to HOME directory */
 if (dir == NULL)
 {
 dir = _getenv("HOME");
