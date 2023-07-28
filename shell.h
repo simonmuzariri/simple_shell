@@ -11,6 +11,7 @@
 #include <limits.h>
 #include <fcntl.h>
 #include <errno.h>
+<<<<<<< HEAD
 
 /* for read/write buffers */
 #define READ_BUF_SIZE 1024
@@ -138,11 +139,82 @@ char *starts_with(const char *, const char *);
 char *_strcat(char *, char *);
 
 /* toem_string1.c */
+=======
+#include <stdarg.h>
+#include <ctype.h>
+
+/*macros*/
+#define PATH_MAX_LENGTH 4096
+#define PATH_SEPARATOR ":"
+#define PROMPT "$ "
+#define MAX_TOKENS 1024
+#define BUFFER_SIZE 1024
+
+/* prompt.c */
+void prompt(void);
+
+/* get_input.c */
+char *get_input(void);
+void free_last_input(void);
+/* get_line.c */
+void *get_line(void);
+
+/* built-funcs */
+int check_for_builtin(char **args);
+int execute_builtin(char *cmd, char **args);
+void shell_help(void);
+void shell_exit(char **args);
+void shell_cd(char **args);
+int shell_setenv(char **args);
+int shell_unsetenv(char **args);
+int shell_env(void);
+int shell_clear(char **args);
+
+/* signal_handler.c */
+void handle_sigint(int sig);
+void handle_sigquit(int sig);
+void handle_sigstp(int sig);
+
+/* execute.c */
+int execute(char **args);
+
+/* parser.c */
+char **tokenize(char *str, const char *delim);
+char **tokenize_input(char *input);
+
+/* get_env.c */
+char *_getenv(const char *name);
+
+/* get_path.c */
+char *get_path(void);
+
+/* find_path */
+char *find_in_path(char *command);
+
+/* free.c */
+void free_error(char **argv, char *arg);
+void free_tokens(char **ptr);
+void free_path(void);
+
+/* error.c */
+void _puts(char *str);
+void _puterror(char *err);
+
+/* utils_funcs1.c */
+int _strlen(const char *);
+int _strcmp(const char *s1, const char *s2);
+int _strncmp(const char *s1, const char *s2, size_t n);
+char *_strstr(char *haystack, char *needle);
+char *_strchar(char *s, char c);
+
+/* utils_funcs2.c */
+>>>>>>> 5062a14c75e24f3505e07ad0d2c6313fa1489077
 char *_strcpy(char *, char *);
 char *_strdup(const char *);
 void _puts(char *);
 int _putchar(char);
 
+<<<<<<< HEAD
 /* toem_exits.c */
 char *_strncpy(char *, char *, int);
 char *_strncat(char *, char *, int);
@@ -153,6 +225,10 @@ char **strtow(char *, char *);
 char **strtow2(char *, char);
 
 /* toem_realloc.c */
+=======
+/* utils_funcs3.c */
+int _atoi(const char *str);
+>>>>>>> 5062a14c75e24f3505e07ad0d2c6313fa1489077
 char *_memset(char *, char, unsigned int);
 void ffree(char **);
 void *_realloc(void *, unsigned int, unsigned int);
