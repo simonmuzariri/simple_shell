@@ -32,28 +32,27 @@ if (i->argv)
 {
 i->argv[0] = _strdup(i->arg);
 i->argv[1] = NULL;
-			}
-		}
-		for (i = 0; info->argv && info->argv[i]; i++)
-			;
-		info->argc = i;
-
-		replace_alias(info);
-		replace_vars(info);
-	}
+}
+}
+for (a = 0; i->argv && i->argv[a]; a++)
+;
+i->argc = a;
+replace_alias(i);
+replace_vars(i);
+}
 }
 
 /**
  * free_info - frees info_t struct fields
  * @info: struct address
- * @all: true if freeing all fields
+ * @a: true if freeing all fields
  */
-void free_info(info_t *info, int all)
+void free_info(info_t *info, int a)
 {
 ffree(info->argv);
 info->argv = NULL;
 info->path = NULL;
-if (all)
+if (a)
 {
 if (!info->cmd_buf)
 free(info->arg);

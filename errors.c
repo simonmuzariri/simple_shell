@@ -22,7 +22,7 @@ a++;
  * _eputchar - writes the character c to stderr
  * @c: The character to print
  *
- * Return: On success 1 or On error -1 
+ * Return: On success 1 or On error -1
  */
 int _eputchar(char c)
 {
@@ -63,9 +63,9 @@ return (1);
 /**
  *_putsfd - prints an input string
  * @s: the string to be printed
- * @fd: the file descriptor 
+ * @fd: the file descriptor
  *
- * Return: the number of chars 
+ * Return: the number of chars
  */
 int _putsfd(char *s, int fd)
 {

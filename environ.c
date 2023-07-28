@@ -49,7 +49,8 @@ return (0);
 return (1);
 }
 /**
- * _myunsetenv - Remove an environment variable * @info: Structure containing arguments
+ * _myunsetenv - Remove an environment variable
+ *  @info: Structure containing arguments
  *  Return: Always 0
  */
 int _myunsetenv(info_t *info)

@@ -3,7 +3,7 @@
 /**
  * _erratoi - convert a string to integer
  * @st: the string to be converted
- * Return: 0 if no string or -1 on error 
+ * Return: 0 if no string or -1 on error
  */
 int _erratoi(char *st)
 {
@@ -46,7 +46,7 @@ _eputs(e);
 /**
  * print_d - function prints a decimal (integer) number (base 10)
  * @input: the input
- * @fd: file descriptor 
+ * @fd: file descriptor
  *
  * Return: number of characters printed
  */
