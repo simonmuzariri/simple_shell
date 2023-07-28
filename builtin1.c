@@ -1,60 +1,56 @@
 #include "shell.h"
 
 /**
- * _myhistory - displays the history list, one command by line, preceded
- *              with line numbers, starting at 0.
- * @info: Structure containing potential arguments. Used to maintain
- *        constant function prototype.
+ * _myhistory - displays the history lists
+ * @i: Structure containing arguments
  *  Return: Always 0
  */
-int _myhistory(info_t *info)
+int _myhistory(info_t *i)
 {
-	print_list(info->history);
-	return (0);
+print_list(i->history);
+return (0);
 }
 
 /**
  * unset_alias - sets alias to string
  * @info: parameter struct
- * @str: the string alias
+ * @s: the string alias
  *
  * Return: Always 0 on success, 1 on error
  */
-int unset_alias(info_t *info, char *str)
+int unset_alias(info_t *info, char *s)
 {
-	char *p, c;
-	int ret;
+char *a, c;
+int r;
 
-	p = _strchr(str, '=');
-	if (!p)
-		return (1);
-	c = *p;
-	*p = 0;
-	ret = delete_node_at_index(&(info->alias),
-		get_node_index(info->alias, node_starts_with(info->alias, str, -1)));
-	*p = c;
-	return (ret);
+a = _strchr(s, '=');
+if (!a)
+return (1);
+c = *a;
+*a = 0;
+r = delete_node_at_index(&(info->alias),
+get_node_index(info->alias, node_starts_with(info->alias, s, -1)));
+*a = c;
+return (r);
 }
 
 /**
  * set_alias - sets alias to string
  * @info: parameter struct
- * @str: the string alias
+ * @s: the string alias
  *
  * Return: Always 0 on success, 1 on error
  */
-int set_alias(info_t *info, char *str)
+int set_alias(info_t *info, char *s)
 {
-	char *p;
-
-	p = _strchr(str, '=');
-	if (!p)
-		return (1);
-	if (!*++p)
-		return (unset_alias(info, str));
-
-	unset_alias(info, str);
-	return (add_node_end(&(info->alias), str, 0) == NULL);
+char *a;
+a = _strchr(s, '=');
+if (!a)
+return (1);
+if (!*++a)
+return (unset_alias(info, s));
+unset_alias(info, s);
+return (add_node_end(&(info->alias), s, 0) == NULL);
 }
 
 /**
