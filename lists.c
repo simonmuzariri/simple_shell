@@ -51,7 +51,7 @@ node = *h;
 new_node = malloc(sizeof(list_t));
 if (!new_node)
 return (NULL);
-memset((void *)new_node, 0, sizeof(list_t));
+_memset((void *)new_node, 0, sizeof(list_t));
 new_node->num = num;
 if (str)
 {

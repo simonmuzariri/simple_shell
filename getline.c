@@ -130,7 +130,7 @@ if (a == -1 || (a == 0 && len == 0))
 return (-1);
 c = _strchr(buf + i, '\n');
 m = c ? 1 + (unsigned int)(c - buf) : len;
-new_p = _ealloc(p, s, s ? s + m : m + 1);
+new_p = _realloc(p, s, s ? s + m : m + 1);
 if (!new_p) /* MALLOC FAILURE! */
 return (p ? free(p), -1 : -1);
 if (s)

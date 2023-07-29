@@ -40,13 +40,13 @@ return (1);
 }
 
 /**
- * put_fd - writes the character c to given fd
+ * _putfd - writes the character c to given fd
  * @c: The character to print
  * @fd: The file descriptor
  *
  * Return: 1 on success or On error, -1 is returned
  */
-int put_fd(char c, int fd)
+int _putfd(char c, int fd)
 {
 static int a;
 static char buf[WRITE_BUF_SIZE];
@@ -75,7 +75,7 @@ if (!s)
 return (0);
 while (*s)
 {
-a += put_fd(*s++, fd);
+a += _putfd(*s++, fd);
 }
 return (a);
 }
