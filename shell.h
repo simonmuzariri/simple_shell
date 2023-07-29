@@ -153,9 +153,9 @@ char **strtow(char *, char *);
 char **strtow2(char *, char);
 
 /* toem_realloc.c */
-char *memset_(char *, char, unsigned int);
+char *_memset_(char *, char, unsigned int);
 void ffree(char **);
-void *realloc(void *, unsigned int, unsigned int);
+void *_realloc(void *, unsigned int, unsigned int);
 
 /* toem_memory.c */
 int b_free(void **);
@@ -212,18 +212,18 @@ int build_history_list(info_t *info, char *buf, int linecount);
 int renumber_history(info_t *info);
 
 /* toem_lists.c */
-list_t *addnode(list_t **, const char *, int);
-list_t *addnode_end(list_t **, const char *, int);
-size_t printlist_str(const list_t *);
-int deletenode_at_index(list_t **, unsigned int);
-void freelist(list_t **);
+list_t *add_node(list_t **, const char *, int);
+list_t *add_node_end(list_t **, const char *, int);
+size_t print_list_str(const list_t *);
+int delete_node_at_index(list_t **, unsigned int);
+void free_list(list_t **);
 
 /* toem_lists1.c */
 size_t list_len(const list_t *);
 char **list_to_strings(list_t *);
-size_t printlist(const list_t *);
-list_t *nodestarts_with(list_t *, char *, char);
-ssize_t getnode_index(list_t *, list_t *);
+size_t print_list(const list_t *);
+list_t *node_starts_with(list_t *, char *, char);
+ssize_t get_node_index(list_t *, list_t *);
 
 /* toem_vars.c */
 int is_chain(info_t *, char *, size_t *);

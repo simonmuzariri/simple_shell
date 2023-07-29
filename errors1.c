@@ -17,7 +17,7 @@ for (a = 0;  st[a] != '\0'; a++)
 if (st[a] >= '0' && st[a] <= '9')
 {
 total *= 10;
-total += (s[i] - '0');
+total += (st[a] - '0');
 if (total > INT_MAX)
 return (-1);
 }

@@ -42,7 +42,7 @@ if (!info->argv[1])
 {
 dir = _getenv(info, "HOME=");
 if (!dir)
-chidir_ret = /* TODO: what should this be? */
+chdir_ret = /* TODO: what should this be? */
 chdir((dir = _getenv(info, "PWD=")) ? dir : "/");
 else
 chdir_ret = chdir(dir);
@@ -64,7 +64,7 @@ chdir_ret = chdir(info->argv[1]);
 if (chdir_ret == -1)
 {
 print_error(info, "can't cd to ");
-_eputs(info->argv[1], _eputchar('\n');
+_eputs(info->argv[1]), _eputchar('\n');
 }
 else
 {
@@ -83,7 +83,7 @@ int _myhelp(info_t *info)
 char **arg_a;
 
 arg_a = info->argv;
-_puts("help call works. Function not yet implemented\n")
+_puts("help call works. Function not yet implemented\n");
 if (0)
 _puts(*arg_a); /* temp att_unused workaround */
 return (0);
